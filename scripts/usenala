@@ -5,6 +5,7 @@ usenala="/home/$username/.use-nala"
 rusenala="/root/.use-nala"
 ubashrc="/home/$username/.bashrc"
 rbashrc="/root/.bashrc"
+
 if [ ! -f "$usenala" ]; then
 cat << \EOF > "$usenala"
 apt() {
