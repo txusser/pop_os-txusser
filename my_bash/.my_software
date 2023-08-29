@@ -1,0 +1,23 @@
+#!/bin/bash
+
+export PATH=$HOME/.local/bin:$PATH
+
+# ANTs normalization
+export ANTSPATH=$HOME/Software/ANTs/install/bin
+export PATH=${ANTSPATH}:$PATH
+
+# FSL Setup
+FSLDIR=$HOME/Software/fsl
+PATH=${FSLDIR}/share/fsl/bin:${PATH}
+export FSLDIR PATH
+. ${FSLDIR}/etc/fslconf/fsl.sh
+
+
+# FORMAT CONVERTERS
+export PATH=$HOME/Work/cimus/fruitcake:$PATH
+export PATH=$HOME/Work/cimus/fruitcake/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/Work/cimus/fruitcake/book/lib:$LD_LIBRARY_PATH
+
+# FREESURFER
+export FREESURFER_HOME=/usr/local/freesurfer/7.4.1
+source $FREESURFER_HOME/SetUpFreeSurfer.sh > /dev/null
