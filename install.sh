@@ -34,14 +34,14 @@ nala install  unzip wget install apt-transport-https curl build-essential tilix 
 nala install neofetch bashtop htop papirus-icon-theme gnome-tweaks git software-properties-common ubuntu-cleaner -y
 
 # Installing even less important Programs
-nala install discord gimp github-desktop
+nala install gimp git-lfs
 
 # Installing my work stuff
-nala install mricron git-lfs
+nala install mricron 
 
 # Installing some flatpaks
 flatpak update
-flatpak install com.synology.SynologyDrive io.github.mimbrero.WhatsAppDesktop 
+flatpak install com.synology.SynologyDrive io.github.mimbrero.WhatsAppDesktop io.github.shiftey.Desktop com.discordapp.Discord
 
 # Installing some snaps I need for convenience (Yes, snaps.... but in my experience these work better as snaps than flatpaks)
 snap install code mailspring notion-snap-reborn zotero-snap libreoffice
