@@ -34,14 +34,14 @@ nala install  unzip wget install apt-transport-https curl build-essential tilix 
 nala install neofetch bashtop htop papirus-icon-theme gnome-tweaks git software-properties-common ubuntu-cleaner -y
 
 # Installing even less important Programs
-nala install discord gimp github-desktop
+nala install discord gimp 
 
 # Installing my work stuff
 nala install mricron git-lfs
 
 # Installing some flatpaks
 flatpak update
-flatpak install com.synology.SynologyDrive io.github.mimbrero.WhatsAppDesktop 
+flatpak install com.synology.SynologyDrive io.github.mimbrero.WhatsAppDesktop io.github.shiftey.Desktop
 
 # Installing some snaps I need for convenience (Yes, snaps.... but in my experience these work better as snaps than flatpaks)
 snap install code mailspring notion-snap-reborn zotero-snap libreoffice
@@ -62,23 +62,6 @@ fc-cache -vf
 # Removing zip Files
 rm ./FiraCode.zip ./Meslo.zip
 
-# Switching to zsh
-# Pending! Ref: https://medium.com/@satriajanaka09/setup-zsh-oh-my-zsh-powerlevel10k-on-ubuntu-20-04-c4a4052508fd
-
-
-# # Making .config and Moving config files and background to Pictures
-# cd $builddir
-# mkdir -p /home/$username/.config
-# 
-# mkdir -p /home/$username/.themes
-# mkdir -p /home/$username/.icons
-# mkdir -p /home/$username/Pictures
-# mkdir -p /home/$username/Pictures/backgrounds
-# cp -R dotconfig/* /home/$username/.config/
-# cp bg.jpg /home/$username/Pictures/backgrounds/
-# mv user-dirs.dirs /home/$username/.config
-# chown -R $username:$username /home/$username
-
 # Download Nordic Theme
 cd /usr/share/themes/
 git clone https://github.com/EliverLara/Nordic.git
@@ -91,13 +74,13 @@ cd Nordzy-cursors
 cd $builddir
 rm -rf Nordzy-cursors
 
+cd $builddir/my_bash
+./setup.sh
+cp .bashrc /home/$username/.bashrc
+cp .my_bash_aliases /home/$username/.my_bash_aliases
+cp .my_bash_functions /home/$username/.my_bash_functions
+cp .my_software /home/$username/.my_software
 
-
-# Beautiful bash
-git clone https://github.com/ChrisTitusTech/mybash
-cd mybash
-bash setup.sh
-cd $builddir
 
 # Use nala
 bash scripts/usenala
