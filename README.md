@@ -3,7 +3,7 @@
 ### To install:
 
 ```
-git clone https://github.com/ChrisTitusTech/debian-titus
+git clone https://github.com/txusser/pop_os-txusser
 cd pop_os-txusser
 sudo ./install.sh
 ```
